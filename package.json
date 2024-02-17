@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-practice-2",
+  "version": "1.0.0",
+  "description": "Node.js practice",
+  "engines": {
+    "node": "^18.17.1",
+    "npm": "^9.6.7"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sarifor",
+  "license": "ISC"
+}
