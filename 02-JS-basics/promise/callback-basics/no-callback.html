@@ -1,0 +1,10 @@
+<script>
+  function loadScript(src) {
+    let script = document.createElement('script');
+    script.src = src;
+    document.head.append(script);
+  }
+
+  loadScript('../0.js');
+  newFunction(); // Uncaught ReferenceError: newFunction is not defined
+</script>

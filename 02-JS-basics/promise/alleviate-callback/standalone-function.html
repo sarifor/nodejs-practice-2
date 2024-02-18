@@ -1,0 +1,35 @@
+<script>
+  function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
+
+    script.onload = () => callback(null, script); // 로딩 성공 시 호출
+    script.onerror = () => callback(new Error(`${src}를 불러오는 도중 에러 발생`)); // 실패 시 호출
+
+    document.head.append(script);
+  }
+
+  
+  // 두 스크립트를 순차적으로 불러오기 (by 각 동작을 독립적인 함수로 만듦)
+  // -> 읽기 어려움, step~ 함수 재사용 불가
+  loadScript('../1.js', step1);
+
+  function step1(error, script) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`${script.src} is ok`);
+      loadScript('../2.js', step2);
+    }
+  }
+
+  function step2(error, script) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`${script.src} is ok`);
+      //
+    }
+  }
+
+</script>

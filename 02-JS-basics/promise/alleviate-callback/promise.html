@@ -1,0 +1,29 @@
+<script>
+  function loadScript(src) {
+    return new Promise(function(resolve, reject) {
+      let script = document.createElement('script');
+      script.src = src;
+
+      script.onload = () => resolve(script);
+      script.onerror = () => reject(new Error(`${src}를 불러오는 도중 에러 발생`));
+
+      document.head.append(script);
+    });
+  }
+
+  // 두 스크립트를 순차적으로 불러오기 (by Promise)
+  // -> 흐름이 자연스럽고 유연해짐
+  loadScript('../1.js')
+  .then(function(script) {
+    console.log(`${script.src} is ok`);
+    return loadScript('../2.js');
+  })
+  .then(function(script) {
+    console.log(`${script.src} is ok`);
+    //    
+  })
+  .catch(function(err) {
+    console.log(err);
+  })
+  
+</script>
