@@ -13,10 +13,10 @@
 
   async function tempFunc() {
     try {
-      let script = await loadScript("../promise/1.js");
+      let script = await loadScript("../1.js");
       console.log(`${script.src} is ok`);
 
-      let script2 = await loadScript("../promise/2.js");
+      let script2 = await loadScript("../2.js");
       console.log(`${script2.src} is ok`);
     } catch (err) {
       console.log(err);
