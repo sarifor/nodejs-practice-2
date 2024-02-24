@@ -1,0 +1,10 @@
+<script>
+  // No try/catch
+  // -> 바깥쪽에 catch를 추가하여 Rejected Promise 처리
+  async function f() {
+    let res = await fetch('nomeaningurl', { mode: "no-cors" });
+    alert(res);
+  }
+
+  f().catch(alert); // TypeError: Failed to fetch
+</script>
