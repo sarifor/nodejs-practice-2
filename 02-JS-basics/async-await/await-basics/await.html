@@ -1,0 +1,14 @@
+<script>
+  // await는 프라미스 처리될 때까지 함수 실행 기다리게 함
+  async function f() {
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("Completed!"), 1000)
+    });
+
+    let result = await promise;
+
+    alert(result);
+  }
+
+  f();
+</script>

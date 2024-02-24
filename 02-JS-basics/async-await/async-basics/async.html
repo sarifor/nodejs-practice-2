@@ -1,0 +1,15 @@
+<script>
+  // async가 붙은 함수는 항상 Promise 반환
+  async function f() {
+    return 1;
+  }
+
+  console.log(f()); // Promise {<fulfilled>: 1}
+
+
+  // async가 붙은 함수는 항상 Promise 반환 2
+  async function f2() {
+    return 2;
+  }
+  f2().then(alert); // 이행 프로미스 반환
+</script>
