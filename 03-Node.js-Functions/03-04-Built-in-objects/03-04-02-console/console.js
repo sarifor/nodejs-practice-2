@@ -35,6 +35,9 @@ console.table([{
 
 
 // dir
+// - If true, then the output will be styled with ANSI color codes. 
+// - Colors are customizable;see customizing util.inspect() colors.
+// - Default: false.
 console.dir(obj, { color: false, depth: 2}); // color doesn't work
 console.dir(obj, { color: true, depth: 1}); // color doesn't work
 
