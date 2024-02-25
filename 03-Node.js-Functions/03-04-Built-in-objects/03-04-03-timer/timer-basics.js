@@ -7,7 +7,7 @@ setTimeout(() => {
 // setTimeout 두 번째 인자 생략
 setTimeout(() => {
   console.log('Execute ASAP');
-});
+}); // default ms(0)
 
 
 // 5초가 지나면 함수 호출 취소
