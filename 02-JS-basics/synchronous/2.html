@@ -1,0 +1,12 @@
+<!--
+# 동기 처리
+  - "<script> 태그를 HTML 문서에 직접적으로 포함 -> 브라우저는 스크립트 파일을 '동기적'으로 로드/실행"
+  - "vs. let script = document.createElement('script'); (비동기)"
+  - 0.js 로딩 후에 newFunction 함수를 실행시킴
+-->
+
+<script src = '../0.js'></script>
+
+<script>  
+  newFunction(); // 0.js에 선언된 함수
+</script>

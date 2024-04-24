@@ -1,4 +1,8 @@
 <script>
+  // # 동기 처리
+  // - 실행 순서 보장: foo 함수, bar 함수 순 실행
+  // - 앞선 태스크가 종료할 때까지 이후 태스크가 블로킹됨
+
   function sleep(func, delay) {
     const delayUntil = Date.now() + delay;
     while (Date.now() < delayUntil);
@@ -12,10 +16,7 @@
   function bar() {
     console.log("bar");
   }
-
-  // 동기 처리
-  // - 실행 순서 보장: foo 함수, bar 함수 순 실행
-  // - 앞선 태스크가 종료할 때까지 이후 태스크가 블로킹됨
+  
   sleep(foo, 3 * 1000);
   bar(); // 3초 이상 블로킹됨
 </script>
