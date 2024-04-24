@@ -1,18 +1,20 @@
 <script>
   // # 콜백
-  // - 사용 O 경우
+  // - 사용 O 경우 2
   // - 0.js 로딩 완료까지 기다린 후 newFunction 함수 실행
   
   function loadScript(src, callback) {
     let script = document.createElement('script');
     script.src = src;
-
-    script.onload = () => callback(script);
     
     document.head.append(script);
+
+    // script.onload 이벤트 사용이 더 바람직
+    // 50ms 안에 스크립트 로딩이 완료되지 않을 수도 있기 때문
+    setTimeout(() => { callback(); }, 50);
   }
 
-  loadScript('../0.js', function() {
+  loadScript('../../0.js', function() {
     newFunction();
   });
 </script>

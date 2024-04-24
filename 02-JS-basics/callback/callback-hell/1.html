@@ -14,12 +14,12 @@
 
   // 두 스크립트를 순차적으로 불러오기 (by 중첩 콜백, 콜백 지옥)
   // -> 관리 힘듦
-  loadScript('../1.js', function(error, script) {
+  loadScript('../../1.js', function(error, script) {
     if (error) { // 로딩 에러 시
       console.log(error);
     } else { // 로딩 성공 시
       console.log(`${script.src} is ok`);
-      loadScript('../2.js', function(error, script) {
+      loadScript('../../2.js', function(error, script) {
         if (error) { // 로딩 에러 시
           console.log(error);
         } else { // 로딩 성공 시
