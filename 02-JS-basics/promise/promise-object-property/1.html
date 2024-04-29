@@ -1,0 +1,38 @@
+<script>
+  // # Promise 객체의 state, result 프로퍼티의 변화
+  // - executor 처리 전(resolve나 reject 호출 전) -> pending, undefined
+  // - executor 처리 성공 시 resolve 호출 -> fullfield, value
+  // - executor 처리 실패 시 reject 호출 -> rejected, error
+
+
+  // executor 처리 전
+  let promise3 = new Promise(function(resolve, reject) { 
+    setTimeout(() => resolve("Completed!"), 2000);
+  }) 
+  console.log(promise3); // Promise {<pending>}
+
+  promise3.then((result) => {
+    console.log(result);
+    console.log(promise3);
+  });
+
+
+  // executor 처리 성공하는 경우
+  let promise = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve("Completed"), 2000);
+  }) 
+  promise.then((result) => {
+    console.log(result); // Completed
+    console.log(promise); // Promise {<fulfilled>: 'Completed'}
+  });
+
+  
+  // executor 처리 실패하는 경우
+  let promise2 = new Promise(function(resolve, reject) {
+    setTimeout(() => reject(new Error("Error!")), 4000);
+  })
+  promise2.catch((result) => {
+    console.log(result); // Error!
+    console.log(promise2); // Promise {<rejected>: Error: Error! (중략) }
+  })
+</script>

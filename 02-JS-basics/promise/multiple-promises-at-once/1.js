@@ -1,3 +1,6 @@
+// # 여러 프로미스 동시 처리
+// - Promise.all 사용
+
 // 즉시 resolve하는 프로미스를 만드는 방법
 const promise1 = Promise.resolve('Success 1');
 const promise2 = Promise.resolve('Success 2');

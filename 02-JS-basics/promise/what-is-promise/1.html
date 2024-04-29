@@ -1,0 +1,25 @@
+<script>
+  // # Promise
+  // - executor(실행자, 실행 함수, new Promise에 전달되는 함수)의 처리 성공 여부에 따라 resolve나 reject 호출
+
+  function loadScript(src) {
+    return new Promise(function(resolve, reject) {
+      let script = document.createElement('script');
+      script.src = src;
+
+      script.onload = () => resolve(script);
+      script.onerror = () => reject('Script is not loaded');
+
+      document.head.append(script);
+    });
+  }
+
+  let promise = loadScript('../../0.js');
+
+  promise.then(
+    script => console.log(script.src),
+    error => console.log(error)
+  );
+
+  promise.then(script => console.log(`${script.src} is loaded!`));
+</script>
