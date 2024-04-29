@@ -1,6 +1,6 @@
 <script>
-  // 하지만 await을 익명 함수로 감싸면
-  // - await을 최상위 레벨 코드에서도 쓸 수 있음
+  // # await
+  // - 익명 함수로 감싸면, 최상위 레벨 코드에서도 쓸 수 있음
   (async () => {
     let res2 = await fetch('https://yahoo.co.jp', { mode: "no-cors" });
     console.log(res2); // Response {type: 'opaque', url: '', redirected: false, status: 0, ok: false, …}

@@ -1,7 +1,8 @@
 <script>
-  // await은
+  // # await
   // - async function 안에서만 쓸 수 있음
   // - 즉, await는 최상위 레벨 코드에선 못 씀
+
   let res = await fetch('https://yahoo.co.jp', { mode: "no-cors" });
-  console.log(res); // Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules 
+  console.log(res); // Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
 </script>
