@@ -1,3 +1,6 @@
+// # commonJS 모듈 using js 확장자
+// - 설정법 1(성공)
+
 const test2 = require("./test2"); // js 안 붙여도 됨
 
 test2();

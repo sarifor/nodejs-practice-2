@@ -1,3 +1,6 @@
+// # ES2015 모듈
+// - 사용 예시
+
 import { odd, even } from './var.js';
 import checkNumber from './func.mjs';
 

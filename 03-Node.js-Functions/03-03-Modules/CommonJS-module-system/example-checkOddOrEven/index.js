@@ -1,3 +1,6 @@
+// # CommonJS 모듈
+// - 사용 예시
+
 const { odd, even } = require('./var');
 const checkNumber = require('./func');
 
