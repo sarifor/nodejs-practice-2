@@ -1,3 +1,7 @@
+// # module.exports vs. exports
+// - module.exports: 하나만 내보내기
+// - export: 여러 값 내보내기
+
 const { odd, even } = require('./var');
 const checkNumber = require('./func');
 
