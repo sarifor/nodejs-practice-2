@@ -1,3 +1,7 @@
+// # Timers
+// - setTimeout, setImmediate, setInterval
+// - clearTimeout, clearImmediate, clearInterval
+
 const timeout = setTimeout(() => { // 3rd
   console.log('Execute in 1.5 sec');
 }, 1500);
