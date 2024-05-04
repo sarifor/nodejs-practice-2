@@ -1,3 +1,7 @@
+// # console 객체
+// - 디버깅을 위해 사용
+// - log, time/timeEnd 등 여러 메서드 가짐
+
 const string = "abc";
 const number = 1;
 const boolean = true;
