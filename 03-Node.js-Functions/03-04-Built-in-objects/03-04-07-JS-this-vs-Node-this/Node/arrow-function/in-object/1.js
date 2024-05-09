@@ -4,7 +4,8 @@
 const obj1 = {
   whatIsThis: () => {
     console.log('function', this === exports, this === global, this === obj1);
+    // function true false false
   }
 };
 
-obj1.whatIsThis(); // function true false false
+obj1.whatIsThis();

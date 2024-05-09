@@ -3,6 +3,7 @@
 
 const whatIsThis = () => {
   console.log('function', this === exports, this === module.exports, this === global);
+  // function true true false
 };
 
-whatIsThis(); // function true true false
+whatIsThis();
