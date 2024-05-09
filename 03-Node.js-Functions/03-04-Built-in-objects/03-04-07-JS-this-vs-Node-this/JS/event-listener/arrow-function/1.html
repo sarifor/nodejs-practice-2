@@ -1,0 +1,12 @@
+<!--
+  # this in 화살표 함수, 이벤트 리스너
+  - = 상위 스코프 this(window 객체)
+-->
+
+<button id="button1">Click!</button>
+
+<script>
+  document.getElementById('button1').addEventListener('click', () => {
+    console.log(this === window); // true
+  });
+</script>

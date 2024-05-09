@@ -1,0 +1,13 @@
+<script>
+  // # this, in 화살표 함수 선언문, in 객체
+  // - = 상위 스코프 this(window 객체)
+
+  const obj1 = {
+    whatIsThis: () => {
+      console.log('function', this === window, this === obj1);
+      // function true false
+    }
+  };
+
+  obj1.whatIsThis();
+</script>

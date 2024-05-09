@@ -1,0 +1,12 @@
+<!--
+  # this in 일반 함수, 이벤트 리스너
+  - = 이벤트가 호출된 요소
+-->
+
+<button id="button1">Click!</button>
+
+<script>
+  document.getElementById('button1').addEventListener('click', function() {
+    console.log(this); // <button id="button1">Click!</button>
+  });
+</script>

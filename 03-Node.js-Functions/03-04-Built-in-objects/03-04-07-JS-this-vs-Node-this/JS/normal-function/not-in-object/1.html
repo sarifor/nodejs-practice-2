@@ -1,0 +1,10 @@
+<script>
+  // # this, in 함수 선언문, in 객체 X
+  // - = window 객체
+
+  function whatIsThis() {
+    console.log('function', this === window); // true
+  }
+
+  whatIsThis();
+</script>

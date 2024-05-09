@@ -1,0 +1,13 @@
+<script>
+  // # this, in 함수 선언문, in 객체
+  // - = obj1 객체
+
+  const obj1 = {
+    whatIsThis: function() {
+      console.log('function', this === window, this === obj1);
+      // function false true
+    }
+  }
+
+  obj1.whatIsThis();
+</script>
