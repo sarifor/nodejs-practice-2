@@ -1,4 +1,8 @@
 <script>
+  // # 비동기 작업: 브라우저에서 setTimeout을 사용하는 경우
+  // - HTML 표준의 중첩 타이머 실행 간격 관련 제약을 준수함
+  // - 다섯 번째 중첩 타이머 이후엔 대기 시간을 최소 4밀리초 이상으로 강제
+  
   start = Date.now();
   let times = [];
 
@@ -7,9 +11,6 @@
     times.push(Date.now() - start);
 
     if (start + 100 < Date.now()) 
-      // 브라우저
-      // - HTML 표준의 중첩 타이머 실행 간격 관련 제약을 준수함
-      // - 다섯 번째 중첩 타이머 이후엔 대기 시간을 최소 4밀리초 이상으로 강제
       console.log(times); // [8, 8, 8, 8, 21, 25, 30, 35, (후략)]
     else
       setTimeout(run);

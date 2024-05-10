@@ -1,3 +1,6 @@
+// # 비동기 작업: 서버에서 setTimeout을 사용하는 경우
+// - 브라우저와 달리 'HTML 표준의 중첩 타이머 실행 간격 관련 제약' 없음
+
 let start = Date.now();
 let times = [];
 
@@ -6,9 +9,6 @@ setTimeout(function run() {
   times.push(Date.now() - start);
 
   if (start + 100 < Date.now())
-    // 서버
-    // - 브라우저와 같은 제약 없음
-    // Node.js의 process.nextTick과 setImmediate를 이용하면 비동기 작업을 지연 없이 실행 가능
     console.log(times); // [1, 3, 19, 34, 50, 65, 81, 97, 113]
   else
     setTimeout(run);
