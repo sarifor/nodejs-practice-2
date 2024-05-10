@@ -1,11 +1,8 @@
-// process.env
-const process = require('process');
+// # process.env
+// - Delete data
+
+const process = require('process'); // 명시하지 않아도 됨
 var env = process.env;
 
-// - Set new data
-env.test = "This is test";
-console.log(env.test); // This is test
-
-// - Delete data
-delete env.test // Javascript delete operator // does work
+delete env.test // Javascript delete operator
 console.log(env.test); // undefined
