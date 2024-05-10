@@ -1,3 +1,6 @@
+// # path 모듈
+// - 폴더와 파일의 경로를 쉽게 조작하도록 도와줌
+
 const path = require('path');
 
 const string = __filename;
