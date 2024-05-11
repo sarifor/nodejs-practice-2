@@ -3,7 +3,7 @@
 
 const exec = require('child_process').exec;
 
-const process = exec('dir', { encoding: 'Shift_JIS' }); // Q. 일어 깨지는데 어떻게 해결?
+const process = exec('cmd /c chcp 65001>nul && dir'); // UTF-8 인코딩으로 dir 실행
 
 process.stdout.on('data', function(data) {
   console.log(data.toString());
