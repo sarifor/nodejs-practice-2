@@ -12,5 +12,5 @@ process.stdout.on('data', function(data) {
 });
 
 process.stderr.on('data', function(data) {
-  console.log(data.toString());
+  console.error(data.toString());
 });
