@@ -5,8 +5,8 @@
 const crypto = require('crypto');
 
 const algorithm = 'aes-256-cbc';
-const key = 'ababababab1111222233223332331111'; // 32 Bytes 필수  // Why?
-const iv = '9876543212345678'; // 16 Bytes 필수  // Why?
+const key = 'ababababab1111222233223332331111'; // 32 Bytes 필수
+const iv = '9876543212345678'; // 16 Bytes 필수
 
 
 // 암호화
