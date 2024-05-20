@@ -3,19 +3,31 @@
 
 const fs = require('fs').promises;
 
-async function readData(message) {
+async function readFilesInOrder() {
   try {
-    const data = await fs.readFile(`${__dirname}/readme2.txt`)
-    console.log(message, data.toString());
-  } catch(err) {
+    console.log('Start~!');
+
+    const data1 = await fs.readFile(`${__dirname}/readme2.txt`);
+    console.log('First~!', data1.toString());
+
+    const data2 = await fs.readFile(`${__dirname}/readme2.txt`);
+    console.log('Second~!', data2.toString());
+
+    const data3 = await fs.readFile(`${__dirname}/readme2.txt`);
+    console.log('Thrid~!', data3.toString());
+
+    console.log('End~!');
+  } catch (err) {
     console.error(err);
   }
 }
 
-console.log('Start~!');
+readFilesInOrder();
 
-readData('First~!');
-readData('Second~!');
-readData('Third~!');
-
-console.log('End~!');
+/*
+Start~! // 순서 유지
+First~! It's me!
+Second~! It's me!
+Thrid~! It's me!
+End~!
+*/
