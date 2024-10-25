@@ -1,6 +1,7 @@
 // # 서버 클러스터링
 // - 코어 개수만큼 워커 프로세스 생성
 // - localhost:8888에 접속할 때마다 워커 프로세스가 HTTP 서버를 실행하여 요청을 처리하고 1초 후 종료됨
+// - 코드를 실행해 놓고, タスクマネージャー＞プロセス＞node 검색하면 프로세스 13개(부모 프로세스 1, 자식 프로세스 12) 확인 가능
 const cluster = require('cluster');
 const http = require('http');
 const numCPUs = require('os').cpus().length;
